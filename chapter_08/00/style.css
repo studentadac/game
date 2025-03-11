@@ -1,0 +1,16 @@
+/* ページ全体のスタイル */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #808080; /* ゲーム画面の背景色 */
+    display: flex;
+    justify-content: center; /* ゲーム画面を中央に配置 */
+    align-items: center; /* ゲーム画面を縦方向に中央に配置 */
+    height: 100vh; /* ビューポートの高さに合わせる */
+    overflow: hidden; /* スクロールバーを非表示にする */
+}
+
+/* ゲーム画面のサイズ設定 */
+canvas {
+    border: 1px solid #000; /* ゲーム画面の周りにボーダーを追加（任意） */
+}
