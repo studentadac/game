@@ -32,9 +32,9 @@ const tileTypes = {
   // プレロード関数
   function preload() {
     // 各画像をプリロード（パスは相対パスで指定）
-    this.load.image('mapFrame', 'resources/mapframe.png');
-    this.load.image('mapBackground', 'resources/map00.png');
-    this.load.image('mapTiles', 'resources/maptiles.png');
+    this.load.image('mapFrame', './resources/mapframe.png');
+    this.load.image('mapBackground', './resources/map00.png');
+    this.load.image('mapTiles', './resources/maptiles.png');
   }
   
   // マップデータ（数値マトリックス）
