@@ -1,11 +1,12 @@
 // tileTypes の定義（元のコードをそのまま再現）
-const tileTypes = {
-    umi:  { id: 0, name: "umi" },
-    arai: { id: 1, name: "arai" },
-    asai: { id: 2, name: "asai" },
-    riku: { id: 3, name: "riku" },
-    iwa:  { id: 4, name: "iwa" }
-  };
+const tileTypes = new Map([
+  [0, { id: 0, name: "umi" }],
+  [1, { id: 1, name: "arai" }],
+  [2, { id: 2, name: "asai" }],
+  [3, { id: 3, name: "riku" }],
+  [4, { id: 4, name: "iwa" }],
+]);
+
   
   // 衝突判定用関数（riku または iwa なら通れない）
   function hitTest(tileIndex) {
@@ -91,14 +92,10 @@ const tileTypes = {
     }
     
     // タイル情報取得
-    getTileInfo(id) {
-      for (let key in tileTypes) {
-        if (tileTypes[key].id === id) {
-          return tileTypes[key];
-        }
-      }
-      return null;
-    }
+function getTileInfo(id) {
+  return tileTypes.get(id) || null;
+}
+
     
     // タッチ終了時の処理
     ontouchend(pointer) {
