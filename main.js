@@ -92,9 +92,9 @@ const tileTypes = new Map([
     }
     
     // タイル情報取得
-function getTileInfo(id) {
-  return tileTypes.get(id) || null;
-}
+  getTileInfo(id) {
+    return tileTypes.get(id) || null;
+  }
 
     
     // タッチ終了時の処理
